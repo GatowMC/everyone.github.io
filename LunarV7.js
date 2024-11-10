@@ -371,7 +371,7 @@ function createPasswordiButton() {
   button.innerHTML += `
     <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
              alt="Descripción de la imagen" 
-             style="width: 2em; height: 2em; margin-right: 0.5em; height:0.85em; width: auto" xml:space="preserve" viewBox="0 0 407 407">Unban`;
+             style="width: 2em; height: 2em;" xml:space="preserve" viewBox="0 0 407 407">Unban`;
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
             prefabMessage("baneo")
