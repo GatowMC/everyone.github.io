@@ -372,7 +372,7 @@ function createPasswordiButton() {
         button.innerHTML += 'Unban'
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
-            prefaMessage("/atore")
+            prefabMessage("/atore")
         });
     }
 }
