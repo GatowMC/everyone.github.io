@@ -363,7 +363,7 @@ function createPasswordiButton() {
     if (typeof PASSWORDI_BUTTON !== 'undefined') {
         let button = document.createElement("button");
         button.setAttribute("data-hook", "passwordi-btn");
-        button.style.fontSize = '0.1em'
+        button.style.fontSize = '1em'
         button.style.padding = '5px 0'
         button.classList.add("admin-only");
         let icon = document.createElement("i");
