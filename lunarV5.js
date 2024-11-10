@@ -368,7 +368,7 @@ function createPasswordiButton() {
         button.classList.add("admin-only");
         let icon = document.createElement("i");
         button.appendChild(icon)
-        button.innerHTML += '<svg xmlns="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" xml:space="preserve" viewBox="0 0 407 407" fill="white" style="height:0.85em; width: auto"><path d="M402 84 323 5c-3-3-7-5-12-5H17C8 0 0 8 0 17v373c0 9 8 17 17 17h373c9 0 17-8 17-17V96c0-4-2-9-5-12zm-101 80H67V39h234v125z"></path><path d="M214 148h43c3 0 6-2 6-6V60c0-4-3-6-6-6h-43c-3 0-6 2-6 6v82c0 4 3 6 6 6z"></path></svg> Unban'
+        button.innerHTML += '<img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" viewBox="0 0 407 407" fill="white" style="height:0.85em; width: auto"</img> Unban'
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
             prefabMessage("/store")
