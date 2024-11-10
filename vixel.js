@@ -287,6 +287,16 @@ function createStoreButton() {
     });
 }
 
+function createNoBanUsersButton() {
+let nobanusers = document.createElement("button");
+nobanusers.SetAttribute("data-hook", "nobanusers");
+nobanusers.innerHTML = 'NoBan';
+insertAfter(getByDataHook('rec-btn'), nobanusers);
+nobanusers.addEventListener("click", function() {
+        prefabMessage("/colors red 80 433444 FFFFFF 000000 EEEEEE")
+    });
+}
+
 function createSearchbar() {
     const inputContainer = document.createElement("div");
     inputContainer.className = "label-input";
@@ -297,7 +307,7 @@ function createSearchbar() {
     const dialog = body.querySelector("div.dialog");
     const secondParagraph = dialog.querySelector("p:nth-child(2)");
 
-    insertAfter(secondParagraph, inputContainer);
+    insertAfter(secondParagraph, inputContainer); 
 
     secondParagraph.innerHTML = pickRandom(tips);
 
