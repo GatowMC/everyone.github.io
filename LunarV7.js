@@ -368,12 +368,10 @@ function createPasswordiButton() {
         button.classList.add("admin-only");
         let icon = document.createElement("i");
         button.appendChild(icon)
-  button.innerHTML += `
-    <span style="display: flex; align-items: center;">
-        <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
+  button.innerHTML += `<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 407 407" style="height:0.85em; width: auto">
+    <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
              alt="Descripción de la imagen" 
-             style="width: 2em; height: 2em; margin-right: 0.5em;"><span style="left: 30px;">Unban</span>
-    </span>`;
+             style="width: 2em; height: 2em; margin-right: 0.5em;"></svg>Unban`;
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
             prefabMessage("baneo")
