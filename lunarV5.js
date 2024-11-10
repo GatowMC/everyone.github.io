@@ -368,7 +368,7 @@ function createPasswordiButton() {
         button.classList.add("admin-only");
         let icon = document.createElement("i");
         button.appendChild(icon)
-        button.innerHTML += '<img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" viewBox="0 0 407 407" fill="white" style="height:0.85em; width: auto"</img> Unban'
+        button.innerHTML += '<img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" alt="Descripción de la imagen" style="width: 1em; height: 1em;"> unban';
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
             prefabMessage("/store")
