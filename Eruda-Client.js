@@ -1142,3 +1142,4 @@ if (typeof VIRTUAL_JOYSTICK !== 'undefined') {
         }
         joystickRootStylesheet.innerHTML = ":root {--joystick-size: " + storedSize + "vh;--joystick-margin: " + storedMargin + "vh;--joystick-opacity: " + storedOpacity + "}"
     }
+}
