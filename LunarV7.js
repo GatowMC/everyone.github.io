@@ -369,9 +369,7 @@ function createPasswordiButton() {
         let icon = document.createElement("i");
         button.appendChild(icon)
   button.innerHTML += `
-    <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
-             alt="Descripción de la imagen" 
-             style="width: 2em; height: 2em;" xml:space="preserve" viewBox="0 0 407 407">Unban`;
+    <span style="display: flex; align-items: center; line-height: 1em;"><img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" alt="Descripción de la imagen" style="width: 2em; height: 2em; margin-right: 0.5em;">unban</span>`;
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
             prefabMessage("baneo")
