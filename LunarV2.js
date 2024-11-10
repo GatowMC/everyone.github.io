@@ -359,6 +359,7 @@ function createPasswordButton() {
         });
     }
 }
+document.addEventListener("DOMContentLoaded", function () {
 function createPasswordiButton() {
     if (typeof PASSWORDI_BUTTON !== 'undefined') {
         let button = document.createElement("button");
@@ -372,10 +373,77 @@ function createPasswordiButton() {
         button.innerHTML += 'Unban'
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
-            prefabMessage("/atore")
+            dialog.style.display = "block";
+        overlay.style.display = "block";
+
+    // Crear el diálogo
+    const dialog = document.createElement("div");
+    dialog.style.display = "none";
+    dialog.style.position = "fixed";
+    dialog.style.left = "50%";
+    dialog.style.top = "50%";
+    dialog.style.transform = "translate(-50%, -50%)";
+    dialog.style.border = "1px solid #ccc";
+    dialog.style.background = "#fff";
+    dialog.style.padding = "20px";
+
+    // Contenido del diálogo
+    const message = document.createElement("p");
+    message.textContent = "¿Qué deseas hacer?";
+
+    // Botones del diálogo
+    const yesButton = document.createElement("button");
+    yesButton.textContent = "Sí";
+    yesButton.onclick = () => {
+        alert("Has elegido Sí");
+        closeDialog();
+    };
+
+    const noButton = document.createElement("button");
+    noButton.textContent = "No";
+    noButton.onclick = () => {
+        alert("Has elegido No");
+        closeDialog();
+    };
+
+    // Función para cerrar el diálogo
+    function closeDialog() {
+        dialog.style.display = "none";
+        overlay.style.display = "none";
+    }
+
+    // Crear overlay
+    const overlay = document.createElement("div");
+    overlay.style.display = "none";
+    overlay.style.position = "fixed";
+    overlay.style.top = "0";
+    overlay.style.left = "0";
+    overlay.style.width = "100%";
+    overlay.style.height = "100%";
+    overlay.style.background = "rgba(0, 0, 0, 0.5)";
+    overlay.onclick = closeDialog;
+
+    // Append elements
+    dialog.appendChild(message);
+    dialog.appendChild(yesButton);
+    dialog.appendChild(noButton);
+    document.body.appendChild(button);
+    document.body.appendChild(dialog);
+    document.body.appendChild(overlay);
+
+    
+    });
+});
         });
     }
 }
+/// DIÁLOGO
+
+
+
+
+
+////// PASSWORD FUNCIÓN 
 
 function createPasswordPopup() {
     // Crear el div de diálogo con la clase específica
