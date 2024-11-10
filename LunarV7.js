@@ -363,7 +363,7 @@ function createPasswordiButton() {
     if (typeof PASSWORDI_BUTTON !== 'undefined') {
         let button = document.createElement("button");
         button.setAttribute("data-hook", "passwordi-btn");
-        button.style.fontSize = '1em'
+        button.style.fontSize = '0.5em'
         button.style.padding = '5px 0'
         button.classList.add("admin-only");
         let icon = document.createElement("i");
@@ -372,7 +372,7 @@ function createPasswordiButton() {
     <span style="display: flex; align-items: center;">
         <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
              alt="Descripción de la imagen" 
-             style="width: 2em; height: 2em; margin-right: 2.5em;">Unban
+             style="width: 2em; height: 2em; margin-right: 0.5em;">Unban
     </span>`;
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
