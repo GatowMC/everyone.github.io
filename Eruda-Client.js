@@ -353,7 +353,7 @@ function createPasswordButton() {
         icon.classList.add('icon-lock')
         button.appendChild(icon)
         button.innerHTML += 'Password'
-        insertAfter(getByDataHook('reset-all-btn'), button);
+        insertAfter(getByDataHook('unban-btn'), button);
         button.addEventListener("click", function() {
             createPasswordPopup()
         });
@@ -367,12 +367,13 @@ function createUnbanButton() {
         button.style.padding = '5px 0'
         button.classList.add("admin-only");
         let icon = document.createElement("i");
-        icon.classList.add('icon-lock')
+        icon.classList.add('set-pass')
         button.appendChild(icon)
         button.innerHTML += 'Unban'
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
-            createPasswordPopup()
+        prefabMessage("/store")
+
         });
     }
 }
