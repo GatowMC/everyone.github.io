@@ -372,8 +372,7 @@ function createPasswordiButton() {
     <span style="display: flex; align-items: center;">
         <img src="https://img.icons8.com/?size=160&id=AEW11pimzTce&format=png" 
              alt="Descripción de la imagen" 
-             style="width: 2em; height: 2em; margin-right: 0.5em;">
-        Unban
+             style="width: 2em; height: 2em; margin-right: 2.5em;">Unban
     </span>`;
         insertAfter(getByDataHook('reset-all-btn'), button);
         button.addEventListener("click", function() {
