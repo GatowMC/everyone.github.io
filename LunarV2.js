@@ -360,24 +360,7 @@ function createPasswordButton() {
     }
 }
 document.addEventListener("DOMContentLoaded", function () {
-function createPasswordiButton() {
-    if (typeof PASSWORDI_BUTTON !== 'undefined') {
-        let button = document.createElement("button");
-        button.setAttribute("data-hook", "passwordi-btn");
-        button.style.fontSize = '1em'
-        button.style.padding = '5px 0'
-        button.classList.add("admin-only");
-        let icon = document.createElement("i");
-        icon.classList.add('icon-lock')
-        button.appendChild(icon)
-        button.innerHTML += 'Unban'
-        insertAfter(getByDataHook('reset-all-btn'), button);
-        button.addEventListener("click", function() {
-            dialog.style.display = "block";
-        overlay.style.display = "block";
-
-    // Crear el diálogo
-    const dialog = document.createElement("div");
+const dialog = document.createElement("div");
     dialog.style.display = "none";
     dialog.style.position = "fixed";
     dialog.style.left = "50%";
@@ -433,6 +416,25 @@ function createPasswordiButton() {
 
     
     });
+
+function createPasswordiButton() {
+    if (typeof PASSWORDI_BUTTON !== 'undefined') {
+        let button = document.createElement("button");
+        button.setAttribute("data-hook", "passwordi-btn");
+        button.style.fontSize = '1em'
+        button.style.padding = '5px 0'
+        button.classList.add("admin-only");
+        let icon = document.createElement("i");
+        icon.classList.add('icon-lock')
+        button.appendChild(icon)
+        button.innerHTML += 'Unban'
+        insertAfter(getByDataHook('reset-all-btn'), button);
+        button.addEventListener("click", function() {
+            dialog.style.display = "block";
+        overlay.style.display = "block";
+
+    // Crear el diálogo
+    
         });
     }
 }
