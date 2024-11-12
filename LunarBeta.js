@@ -39,7 +39,7 @@ const CUSTOM_CSS = `.game-view>.top-section,.room-view{margin-top:0}.stats-view,
 
 
 
-.chatbox-view-contents>.drag,.graph,.showing-room-view>.gameplay-section
+.chatbox-view-contents>.drag,.graph,.gameplay-section
 {display:none}
 
 
@@ -70,7 +70,7 @@ div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p:nth-last-child(-n+5)
 
 
 
-.log>div>p:has(br){display:none!important}@keyframes fadeOut{0%{opacity:1}100%{opacity:0;display:none}}.chatbox-view-contents{flex-direction:column-reverse;pointer-events:none;background:0 0;height:100vh;position:absolute;text-align:center;align-items:center;top:30px;width:100vw}.showing-room-view>.bottom-section>.chatbox-view>div{top:0!important}.chatbox-view-contents>.log{flex-direction:column}.chatbox-view{pointer-events:none;position:absolute;left:0;top:0;height:0!important;overflow-y:visible}.log-contents{display:flex;flex-direction:column-reverse}.stats-view{left:50%;bottom:0;background-color:transparent;text-shadow:1px 1px 1px #000,0 1px 1px #000;padding:8px;margin:4px;line-height:1.5em;position:absolute;text-align:center!important;opacity:.25;width:min-content;transform:translate(-50%,0);pointer-events:all;display:flex;flex-direction:column-reverse}.chatbox-view-contents>.autocompletebox{position:relative}.file-btn, [data-hook=rec-btn]
+.log>div>p:has(br){display:none!important}@keyframes fadeOut{0%{opacity:1}100%{opacity:0;display:none}}.chatbox-view-contents{flex-direction:column-reverse;pointer-events:none;background:0 0;height:100vh;position:absolute;text-align:center;align-items:center;top:30px;width:100vw}.showing-room-view>.bottom-section>.chatbox-view>div{top:0!important}.chatbox-view-contents>.log{flex-direction:column}.chatbox-view{pointer-events:none;position:absolute;left:0;top:0;height:0!important;overflow-y:visible}.log-contents{display:flex;flex-direction:column-reverse}.stats-view{left:50%;bottom:0;background-color:transparent;text-shadow:1px 1px 1px #000,0 1px 1px #000;padding:8px;margin:4px;line-height:1.5em;position:absolute;text-align:center!important;opacity:.25;width:min-content;transform:translate(-50%,0);pointer-events:all;display:flex;flex-direction:column-reverse}.chatbox-view-contents>.autocompletebox{position:relative}.file-btn, [data-hook=rec-btn].showing-room-view>
 
 
 
