@@ -1,3 +1,16 @@
+const gameFrame = document.querySelector('.gameframe').contentWindow;
+
+let stylesheet = document.createElement("style");
+gameFrame.document.head.appendChild(stylesheet);
+
+let body = document.querySelector('.gameframe').contentWindow.document.body;
+
+document.querySelector("meta[name=viewport]").setAttribute('content', 'width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=0');
+var metaTag = document.createElement('meta');
+
+metaTag.setAttribute('http-equiv', 'X-UA-Compatible');
+metaTag.setAttribute('content', 'ie=edge');
+gameFrame.document.head.appendChild(metaTag);
 
 /* ONLY COMMENT TO DISABLE*/
 const VIRTUAL_JOYSTICK = true;
