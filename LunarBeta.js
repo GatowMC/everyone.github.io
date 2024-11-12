@@ -34,7 +34,35 @@ const CUSTOM_CSS = `.game-view>.top-section,.room-view{margin-top:0}.stats-view,
 
 
 
-.roomlist-view>.dialog,.view-wrapper>.dialog{max-width:calc(100vw - 2vw);max-height:calc(100vh - 2vw);opacity:67%}.chatbox-view-contents>.drag,.graph,.showing-room-view>.gameplay-section{display:none}body>div>div>div.dialog>p:nth-child(2){font-size:0%}body>div>.roomlist-view>div.dialog>p:nth-child(2)::after{font-size:medium;content:"HaxBall Mobile is now Open-Source. Feel free to make and publish improvements to the developer community";font-weight:700}.filters::after{content:"Vixel Dev 2024 - InjecThor";white-space:pre;font-style:italic}button[data-hook=shirt-btn]:after{content:"◑";font-size:1.25em}button[data-hook=shirt-btn]{margin-right:6px;margin-left:6px}div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p{display:none;text-shadow:1px 0 4px rgba(0,0,0,.66)}div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p:nth-last-child(-n+5){opacity:1;display:block;animation:10s forwards fadeOut}
+.roomlist-view>.dialog,.view-wrapper>.dialog
+{max-width:calc(100vw - 2vw);max-height:calc(100vh - 2vw);opacity:67%}
+
+
+
+.chatbox-view-contents>.drag,.graph,.showing-room-view>.gameplay-section
+{display:none}
+
+
+body>div>div>div.dialog>p:nth-child(2)
+{font-size:0%}
+
+body>div>.roomlist-view>div.dialog>p:nth-child(2)::after
+{font-size:medium;content:"HaxBall Mobile is now Open-Source. Feel free to make and publish improvements to the developer community";font-weight:700}
+
+.filters::after
+{content:"Vixel Dev 2024 - InjecThor";white-space:pre;font-style:italic}
+
+button[data-hook=shirt-btn]:after
+{content:"◑";font-size:1.25em}
+
+button[data-hook=shirt-btn]
+{margin-right:6px;margin-left:6px}
+
+div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p
+{display:none;text-shadow:1px 0 4px rgba(0,0,0,.66)}
+
+div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p:nth-last-child(-n+5)
+{opacity:1;display:block;animation:10s forwards fadeOut}
 
 
 
