@@ -29,6 +29,46 @@ const CUSTOM_CSS = `.game-view>.top-section,.room-view{margin-top:0}.stats-view,
 const CUSTOM_LOGO = { "url": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill-rule='evenodd' clip-rule='evenodd' image-rendering='optimizeQuality' shape-rendering='geometricPrecision' text-rendering='geometricPrecision' viewBox='0 0 2859 2858'%3E%3Cpath fill='%23eda242' d='M1249 0h124a139997 139997 0 0 1 548 550l2 120-1 3L1249 0Zm-143 26h2l788 789L816 1896 26 1106 1106 26Zm206 500c28 1 45 15 51 43l-11 357c-6 26-22 41-49 44a51 51 0 0 1-50-55l10-287-291 10c-31-3-49-20-51-51 2-27 16-43 43-49l348-12Zm-489 99c20-1 36 7 47 24l265 578c11 28 3 50-22 66-29 11-51 4-67-21L779 687c-4-34 11-55 44-62ZM587 920a52 52 0 0 1 50 43l-9 298 12 1c90-4 180-7 271-9 34-2 54 14 60 49-4 32-22 49-54 50l-338 12c-34-3-52-22-52-56l11-340c4-29 20-45 49-48ZM0 1371v-118l1-5 674 673a3825 3825 0 0 1-129-2L2 1376l-2-5Zm1543-36a5355 5355 0 0 1 61 63l-205 205h-3l-60-59v-2l207-207Zm206 202 170 172 2 4 2 210-1 207a13671 13671 0 0 1-175-176 23576 23576 0 0 1 2-417Zm-120 3 2 149-1 149-149-150 148-148Zm408 289 5 2 166 167 4 8v415l-172-171-3-7v-414Zm292 292 149 149-149 149v-298Zm231 233h3l60 61v2l-205 205h-2l-61-60v-3l205-205Zm299 261v2l-3 5-236 236h-7l-137-47c-3-3-4-7-3-10v-67c4-11 11-20 22-26l227-228c5-6 13-9 21-8h58c4-1 8 0 11 4l47 139Z'/%3E%3C/svg%3E", "height": "100px" };
 const CUSTOM_FONT = { "name": "Inter", "type": "sans-serif", "url": "https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" };
 
+// Script para ajustar estilos en tabletas
+(function() {
+    // Función para aplicar estilos específicos
+    function adjustStyles() {
+        const width = window.innerWidth;
+
+        // Verifica si el ancho de la pantalla está dentro de un rango típico de tabletas
+        if (width >= 600 && width <= 900) {
+            // Cambiar el tamaño de fuentes
+            document.body.style.fontSize = '14px'; // Tamaño de fuente reducido
+
+            // Cambiar el tamaño y el espaciado de los elementos
+            const elements = document.querySelectorAll('h1, h2, p, button');
+            elements.forEach(el => {
+                el.style.margin = '10px'; // Espaciado reducido
+                if (el.tagName === 'H1') {
+                    el.style.fontSize = '24px'; // Tamaño de H1
+                } else if (el.tagName === 'H2') {
+                    el.style.fontSize = '20px'; // Tamaño de H2
+                } else {
+                    el.style.fontSize = '14px'; // Tamaño de párrafos
+                }
+            });
+
+            // Ajustar el tamaño de imágenes
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.maxWidth = '100%'; // Hacer que las imágenes sean responsivas
+                img.style.height = 'auto'; // Mantener la proporción
+            });
+        }
+    }
+
+    // Llama a la función al cargar la página
+    window.onload = adjustStyles;
+
+    // Reajusta los estilos si la ventana cambia de tamaño
+    window.onresize = adjustStyles;
+})();
+
 
 if(!localStorage.getItem('low_latency_canvas')){
     localStorage.setItem('low_latency_canvas',0)
