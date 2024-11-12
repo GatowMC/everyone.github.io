@@ -1,0 +1,40 @@
+
+// Script para ajustar estilos en tabletas
+(function() {
+    // Función para aplicar estilos específicos
+    function adjustStyles() {
+        const width = window.innerWidth;
+
+        // Verifica si el ancho de la pantalla está dentro de un rango típico de tabletas
+        if (width >= 600 && width <= 900) {
+            // Cambiar el tamaño de fuentes
+            document.body.style.fontSize = '14px'; // Tamaño de fuente reducido
+
+            // Cambiar el tamaño y el espaciado de los elementos
+            const elements = document.querySelectorAll('h1, h2, p, button');
+            elements.forEach(el => {
+                el.style.margin = '10px'; // Espaciado reducido
+                if (el.tagName === 'H1') {
+                    el.style.fontSize = '24px'; // Tamaño de H1
+                } else if (el.tagName === 'H2') {
+                    el.style.fontSize = '20px'; // Tamaño de H2
+                } else {
+                    el.style.fontSize = '14px'; // Tamaño de párrafos
+                }
+            });
+
+            // Ajustar el tamaño de imágenes
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                img.style.maxWidth = '100%'; // Hacer que las imágenes sean responsivas
+                img.style.height = 'auto'; // Mantener la proporción
+            });
+        }
+    }
+
+    // Llama a la función al cargar la página
+    window.onload = adjustStyles;
+
+    // Reajusta los estilos si la ventana cambia de tamaño
+    window.onresize = adjustStyles;
+})();
