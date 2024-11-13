@@ -43,9 +43,9 @@ div.chatbox-view>div>div.input>input{overflow:hidden}
 
 h1{border-bottom-color:#fec45b!important}
 
-.room-view{margin-bottom:0;height:100%;opacity:67%;color:pink}.
+.room-view{margin-bottom:0;height:100%;opacity:67%}.
 
-room-view>.container{margin-top:auto!important;max-width:none;max-height:none;border-radius:0;width:100%;margin-bottom:30px;opacity:67%;color:pink}
+room-view>.container{margin-top:auto!important;max-width:none;max-height:none;border-radius:0;width:100%;margin-bottom:30px;opacity:67%}
 
 .room-view>.container>.header-btns{bottom:0;top:auto;display:flex;flex-flow:row-reverse;left:10px;right:auto}
 
