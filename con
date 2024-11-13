@@ -1,0 +1,116 @@
+// Inicialización de variables
+let controlContainer; // Contenedor de controles
+const controls = {
+    up: false,
+    down: false,
+    left: false,
+    right: false
+};
+
+// Crear un contenedor para los controles
+function createControlContainer() {
+    controlContainer = document.createElement('div');
+    controlContainer.style.position = 'fixed';
+    controlContainer.style.bottom = '20px';
+    controlContainer.style.left = '20px';
+    controlContainer.style.display = 'flex';
+    controlContainer.style.flexDirection = 'column';
+    controlContainer.style.alignItems = 'center';
+    document.body.appendChild(controlContainer);
+}
+
+// Crear los botones de control
+function createButton(direction) {
+    const button = document.createElement('div');
+    button.style.width = '60px';
+    button.style.height = '60px';
+    button.style.borderRadius = '30px';
+    button.style.backgroundColor = 'rgba(255, 255, 255, 0.7)';
+    button.style.margin = '5px';
+    button.style.display = 'flex';
+    button.style.alignItems = 'center';
+    button.style.justifyContent = 'center';
+    button.style.cursor = 'pointer';
+
+    button.innerText = direction.toUpperCase(); // Muestra la dirección
+    button.addEventListener('touchstart', () => handleTouchStart(direction));
+    button.addEventListener('touchend', handleTouchEnd);
+
+    controlContainer.appendChild(button);
+
+    return button;
+}
+
+// Manejar inicio del toque
+function handleTouchStart(direction) {
+    controls[direction] = true;
+
+    if (direction === 'up' || direction === 'down') {
+        if (controls.right) showCombinedButton('up_right');
+        if (controls.left) showCombinedButton('down_left');
+    } else if (direction === 'left' || direction === 'right') {
+        if (controls.up) showCombinedButton('up_left');
+        if (controls.down) showCombinedButton('down_right');
+    }
+
+    updateControls();
+}
+
+// Manejar fin del toque
+function handleTouchEnd() {
+    Object.keys(controls).forEach(direction => {
+        controls[direction] = false;
+    });
+    hideCombinedButtons();
+    updateControls();
+}
+
+// Actualizar controles de movimiento
+function updateControls() {
+    // Aquí puedes agregar la lógica para manipular el movimiento del jugador
+    // por ejemplo: moverJugador(controls);
+    console.log("Controles actuales:", controls);
+}
+
+// Mostrar flechas combinadas
+function showCombinedButton(combination) {
+    const combinedButton = document.createElement('div');
+    combinedButton.style.width = '50px';
+    combinedButton.style.height = '50px';
+    combinedButton.style.borderRadius = '25px';
+    combinedButton.style.backgroundColor = 'rgba(255, 255, 0, 0.7)';
+    combinedButton.style.position = 'absolute';
+    combinedButton.innerText = combination.replace('_', '').toUpperCase();
+
+    // Posicionamiento basado en la combinación
+    if (combination === 'up_right') {
+        combinedButton.style.bottom = '80px';
+        combinedButton.style.left = '80px';
+    } else if (combination === 'down_right') {
+        combinedButton.style.bottom = '80px';
+        combinedButton.style.left = '20px';
+    } else if (combination === 'up_left') {
+        combinedButton.style.bottom = '80px';
+        combinedButton.style.left = '-40px';
+    } else if (combination === 'down_left') {
+        combinedButton.style.bottom = '20px';
+        combinedButton.style.left = '-40px';
+    }
+
+    controlContainer.appendChild(combinedButton);
+}
+
+// Ocultar flechas combinadas
+function hideCombinedButtons() {
+    const combinedButtons = controlContainer.querySelectorAll('div.positioned');
+    combinedButtons.forEach(button => button.remove());
+}
+
+// Configurar controles al cargar la página
+window.addEventListener('load', () => {
+    createControlContainer();
+    createButton('up');
+    createButton('down');
+    createButton('left');
+    createButton('right');
+});
