@@ -29,7 +29,7 @@ const CUSTOM_CSS = `.game-view>.top-section,.room-view{margin-top:0}
 
 .stats-view,[data-hook=ok]{text-transform:uppercase}*{user-select:none}
 
-body{background-image:url('https://media.discordapp.net/attachments/1304956298273488916/1305338595573370890/image_search_1731215952961.webp?ex=6734a50d&is=6733538d&hm=4ed2b1bd9ff9515da88c557d99a00f11f8fcbf1817b59cfa1554b9d7d384ee84&');background-size:cover}
+body{background-image:url('https://ibb.co/z2nC4Cv');background-size:cover}
 
 [data-hook=leave-btn]{background:#c13535!important;margin-right:6px}
 
