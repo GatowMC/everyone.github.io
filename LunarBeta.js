@@ -98,8 +98,7 @@ button[data-hook=shirt-btn]:after
 button[data-hook=shirt-btn]
 {margin-right:6px;margin-left:6px}
 
-.chatbox-view{color:purple}
-.div.chatbox-view{color:purple}
+.chatbox-view{color:#ad08ff;background-color:#ad08ff}
 
 div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p
 {display:none;text-shadow:1px 0 4px rgba(0,0,0,.66)}
