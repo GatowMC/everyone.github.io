@@ -29,7 +29,7 @@ const CUSTOM_CSS = `.game-view>.top-section,.room-view{margin-top:0}
 
 .stats-view,[data-hook=ok]{text-transform:uppercase}*{user-select:none}
 
-body{background-image:url('https://ibb.co/z2nC4Cv');background-size:cover}
+body{background-image:url('https://i.postimg.cc/KjwKdrtZ/image-search-1731215952961.webp');background-size:cover}
 
 [data-hook=leave-btn]{background:#c13535!important;margin-right:6px}
 
