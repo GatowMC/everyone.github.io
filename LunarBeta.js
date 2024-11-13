@@ -102,7 +102,7 @@ button[data-hook=shirt-btn]
 div.chatbox-view{background-color:#d580ff;color:#d580ff}
 
 div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p
-{display:none;text-shadow:1px 0 4px rgba(0,0,0,.66)}
+{display:none;text-shadow:1px 0 4px rgba(255,255,255,.66)}
 
 div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p:nth-last-child(-n+5)
 {opacity:1;display:block;animation:10s forwards fadeOut}
