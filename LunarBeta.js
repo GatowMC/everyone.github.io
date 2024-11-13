@@ -78,7 +78,6 @@ room-view>.container{margin-top:auto!important;max-width:none;max-height:none;bo
 {max-width:calc(100vw - 2vw);max-height:calc(100vh - 2vw);opacity:67%}
 
 
-.chatbox-view-contents{background-color:pink;color:pink}
 
 .chatbox-view-contents>.drag,.graph,.showing-room-view>
 {display:none}
@@ -99,13 +98,14 @@ button[data-hook=shirt-btn]:after
 button[data-hook=shirt-btn]
 {margin-right:6px;margin-left:6px}
 
-.chatbox-view{color:pink;background-color:pink}
+.chatbox-view{background-color:pink;color:pink}
+div.chatbox-view{background-color:pink;color:pink}
 
 div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p
 {display:none;text-shadow:1px 0 4px rgba(0,0,0,.66)}
 
 div.chatbox-view>div>div.log.subtle-thin-scrollbar>div>p:nth-last-child(-n+5)
-{opacity:1;display:block;animation:15s forwards fadeOut}
+{opacity:1;display:block;animation:10s forwards fadeOut}
 
 
 
