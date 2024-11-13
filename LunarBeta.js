@@ -250,7 +250,7 @@ chatJoystickStylesheet.innerHTML = `#chat-joystick,
                                         display: flex;
                                                                             align-items: center;
                                                                             justify-content: center;
-                                        box-shadow: rgba(255, 255, 255, 0.66) 1px 0px 4px;
+                                        box-shadow: rgba(0, 0, 0, 0.66) 1px 0px 4px;
                                         filter: saturate(1.4);
                                     }
 
@@ -268,7 +268,7 @@ chatJoystickStylesheet.innerHTML = `#chat-joystick,
                                                                                     font-size: 0.8em;
                                                                                     font-family: 'Inter';
                                                                                     font-weight: normal;
-                                            text-shadow: 1px 0px 4px rgba(255,255,255,0.66);
+                                            text-shadow: 1px 0px 4px rgba(0,0,0,0.66);
                                     }`;
 
 let chatJoystickRootStylesheet = document.createElement("style");
